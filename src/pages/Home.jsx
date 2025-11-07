@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const services = [
@@ -33,7 +34,8 @@ export default function Home() {
       desc: "An intensive program designed for IPMAT aspirants who seek to achieve excellence with targeted practice, mentor support, and performance tracking.",
       img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=60",
     },
-];
+  ];
+
   return (
     <div className="bg-white">
       {/* ===== HERO SECTION ===== */}
@@ -55,13 +57,13 @@ export default function Home() {
           Join India’s top mentors for CAT, XAT, IPMAT, and other MBA exams. Get
           personalized guidance, live classes, and a structured learning experience.
         </motion.p>
-        <motion.a
-          href="/courses"
-          whileHover={{ scale: 1.1 }}
-          className="bg-yellow-400 text-blue-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition"
-        >
-          Explore Courses
-        </motion.a>
+        <motion.div whileHover={{ scale: 1.1 }} className="inline-block">
+          <Link to="/courses">
+            <button className="bg-yellow-400 text-blue-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition">
+              Explore Courses
+            </button>
+          </Link>
+        </motion.div>
       </section>
 
       {/* ===== OUR SERVICES ===== */}
@@ -99,12 +101,11 @@ export default function Home() {
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">{service.desc}</p>
-                <a
-                  href="/courses"
-                  className="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition"
-                >
-                  Learn More
-                </a>
+                <Link to="/courses">
+                  <button className="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </motion.div>
           ))}
@@ -120,13 +121,15 @@ export default function Home() {
           Join thousands of students learning smarter with ThinkPlus — India’s fastest
           growing EdTech platform for MBA, Law, and aptitude preparation.
         </p>
-        <a
-          href="/about"
-          className="bg-yellow-400 text-blue-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition"
-        >
-          Know More About Us
-        </a>
+        <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
+          <Link to="/about">
+            <button className="bg-yellow-400 text-blue-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition">
+              Know More About Us
+            </button>
+          </Link>
+        </motion.div>
       </section>
     </div>
   );
 }
+
