@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { GraduationCap, Users, Clock, Award, Target, Lightbulb, BookOpen, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
@@ -23,10 +24,10 @@ export default function About() {
           className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto"
         >
           ThinkPlus is India’s fastest-growing EdTech platform dedicated to helping
-          ambitious students achieve their <b>MBA dreams</b>. Our mission is simple —
-          to make high-quality mentorship, structured courses, and personalized
-          preparation accessible to every learner. With top mentors, adaptive learning
-          paths, and industry-inspired assessments, we’ve guided thousands of learners
+          ambitious students achieve their <b>MBA dreams</b>. Our mission is simple — 
+          to make high-quality mentorship, structured courses, and personalized 
+          preparation accessible to every learner. With top mentors, adaptive learning 
+          paths, and industry-inspired assessments, we’ve guided thousands of learners 
           towards success in exams like <b>CAT, XAT, NMAT, IIFT, and SNAP</b>.
         </motion.p>
       </div>
@@ -135,12 +136,11 @@ export default function About() {
           Let’s turn your MBA dreams into reality — with India’s best mentors, proven strategies,
           and a thriving community of learners.
         </p>
-        <a
-          href="/courses"
-          className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-100 transition"
-        >
-          Explore Courses
-        </a>
+        <Link to="/courses">
+          <button className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-100 transition">
+            Explore Courses
+          </button>
+        </Link>
       </motion.div>
     </div>
   );
