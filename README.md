@@ -19,10 +19,10 @@ A modern, responsive educational website built for **ThinkPlus Education**, show
 - **Icons:** Lucide React  
 
 # Routing
-Home: /
-About: /about
-Courses: /courses
-Contact: /contact
+Home
+About
+Courses
+Contact
 
 # Deployement
 This project is deployed to:
